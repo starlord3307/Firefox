@@ -63,7 +63,7 @@ def clear_firefox_data():
         for i in x:
             firefox_cookies_path = os.path.join(firefox_user_rpath, f'{i}', 'cookies.sqlite')
             if os.path.exists(firefox_cookies_path):
-                shutil.rmtree(firefox_cookies_path)
+                os.remove(firefox_cookies_path)
 
     # Clear Caches
     localappdata_path = os.environ.get('LOCALAPPDATA')
